@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Шрифты с Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Web-project</title>
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="container">
+			<a href="#" class="logo">Solo Pizza</a>
+			<div class="navbar-wrap">
+				<ul class="navbar-menu">
+					<li><a href="#main-content" class="to-menu">Меню</a></li>
+					<li><a href="#footer">Контакты</a></li>
+					<li><a href="#">О нас</a></li>
+				</ul>
+				<button class="basket-button">Корзина</button>
+				<span class="cart-count">0</span>
+				<div class="cart-overlay">
+					<div class="cart-content">
+						<span class="close-button">&#10006;</span>
+						<h2>Ваша корзина</h2>
+						<div class="empty-cart">Пока здесь пусто</div>
+						<div class="cart-items">
+							<!-- Товары -->
+						</div>
+						<div class="buy-container">
+							<span class="total-price"></span>
+							<button class="buy-button">К оформлению</button>
+						</div>
+					</div>
+				</div>
+				<div class="make-order" style="display: none;">
+					<h2>Оформление заказа</h2>
+
+					<form action="sender.php" method="post">
+						<label for="name">Имя:</label>
+						<input type="text" class="name" name="name" required>
+
+						<label for="phone">Телефон:</label>
+						<input type="text" class="phone" name="phone" required>
+
+						<label for="email">Email (необязательно):</label>
+						<input type="email" class="email" name="email">
+
+						<label for="address">Адрес доставки:</label>
+						<textarea class="address" name="address" rows="4" required></textarea>
+
+						<label for="comments">Комментарии к заказу (необязательно):</label>
+						<textarea class="comments" name="comments" rows="4"></textarea>
+
+						<input type="submit" value="Подтвердить заказ">
+						<button type="button" class="close-order">Отменить</button>
+						<div class="status"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="slider middle">
+		<div class="slides">
+			<input type="radio" , name="r" , id="r1" checked>
+			<input type="radio" , name="r" , id="r2">
+			<input type="radio" , name="r" , id="r3">
+
+			<div class="slide s1"><img src="Images/slide3.jpeg" alt="" class=""></div>
+			<div class="slide"><img src="Images/slide2.jpg" alt="" class=""></div>
+			<div class="slide"><img src="Images/slide1.jpg" alt="" class=""></div>
+		</div>
+		<div class="navigation">
+			<label for="r1" class="bar"></label>
+			<label for="r2" class="bar"></label>
+			<label for="r3" class="bar"></label>
+		</div>
+	</div>
+	<div class="content" id="main-content">
+		<div class="menu-container">
+			<h3 class="name-group">Пицца</h3>
+			<div class="product-row">
+				<div class="product" data-pizza-id="pizza1">
+					<img src="Images/pizza/pizza1.png" alt="Блюдо 1">
+					<h3>Пепперони (Pepperoni)</h3>
+					<p>Тесто, томатный соус, сыр моцарелла, пепперони</p>
+					<div class="price-button">
+						<span class="price">От 975 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+				<div class="product" data-pizza-id="pizza2">
+					<img src="Images/pizza/pizza2.png" alt="Блюдо 2">
+					<h3>Пицца «Маргарита» (Margherita)</h3>
+					<p>Томатный соус, моцарелла и орегано</p>
+					<div class="price-button">
+						<span class="price">От 945 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+				<div class="product" data-pizza-id="pizza3">
+					<img src="Images/pizza/pizza3.png" alt="Блюдо 3">
+					<h3>Пицца «Карбонара» (Carbonara)</h3>
+					<p>Томатный соус, моцарелла, пармезан, яйца, бекон</p>
+					<div class="price-button">
+						<span class="price">От 975 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-row">
+				<div class="product" data-pizza-id="pizza4">
+					<img src="Images/pizza/pizza4.png" alt="Блюдо 4">
+					<h3>Пицца с соусом песто (Pizza al Pesto)</h3>
+					<p>Помидоры, моцарелла, генуэзское песто, кедровые орехи и оливки</p>
+					<div class="price-button">
+						<span class="price">От 999 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+				<div class="product" data-pizza-id="pizza5">
+					<img src="Images/pizza/pizza5.png" alt="Блюдо 5">
+					<h3>Пицца «Каприччиоза» (Capricciosa)</h3>
+					<p>Томатный соус, моцарелла, ветчина, артишоки, грибы и оливки</p>
+					<div class="price-button">
+						<span class="price">От 945 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+				<div class="product" data-pizza-id="pizza6">
+					<img src="Images/pizza/pizza6.png" alt="Блюдо 6">
+					<h3>Пицца по-немецки (Tedesca)</h3>
+					<p>Томатный соус, моцарелла и Венская колбаса</p>
+					<div class="price-button">
+						<span class="price">От 945 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+			</div>
+			<div class="product-row">
+				<div class="product" data-pizza-id="pizza7">
+					<img src="Images/pizza/pizza7.png" alt="Блюдо 7">
+					<h3>Вегетарианская пицца (Vegetariana)</h3>
+					<p>Томатный соус, моцарелла и различные овощи</p>
+					<div class="price-button">
+						<span class="price">От 915 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+				<div class="product" data-pizza-id="pizza8">
+					<img src="Images/pizza/pizza8.png" alt="Блюдо 8">
+					<h3>Пицца «Неаполетано» (Napoletana)</h3>
+					<p>Томатный соус, моцарелла, орегано, анчоусы</p>
+					<div class="price-button">
+						<span class="price">От 985 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+				<div class="product" data-pizza-id="pizza9">
+					<img src="Images/pizza/pizza9.png" alt="Блюдо 9">
+					<h3>Пицца «Четыре сыра» (Quattro Formaggi)</h3>
+					<p> Томатный соус, моцарелла, пармезан, сыр горгонзола, артишоки и орегано</p>
+					<div class="price-button">
+						<span class="price">От 975 ₽</span>
+						<button class="choose-button">Выбрать</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer-section">
+			<p>&copy; 2024 Solo Pizza. Все права защищены.</p>
+		</div>
+		<div class="footer-section" id="footer">
+			<a href="#">Политика конфиденциальности</a>
+			<a href="#">Телефон: +7 950-240-58-23</a>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
