@@ -169,6 +169,7 @@ jQuery(document).ready(function () {
   let isCancelled = false; // Переменная для отслеживания отмены
 
   jQuery('form').submit(function(event) {
+    event.preventDefault();
       if (isCancelled) {
           return; // Прервать отправку, если заказ отменен
       }
@@ -189,10 +190,9 @@ jQuery(document).ready(function () {
       }
     });
   });
-  jQuery('.close-order').click(function(event) {
-    event.preventDefault();
-    jQuery('.status').html('Заказ отменен');
-    jQuery('.order-form').addClass('hidden');
-    isCancelled = true; 
+  jQuery('.close-order').click(function (event) {
+    event.preventDefault(); // Предотвращаем отправку формы
+    jQuery('.status').html('Заказ отменен'); // Изменяем текст в статусе
+    jQuery('.make-order').addClass('hidden'); // Скрываем форму
   });
 });
